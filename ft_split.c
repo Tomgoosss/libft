@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:36:13 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/20 14:33:36 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:44:59 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,31 +35,32 @@ static int	stringcounter(char const *s, char c)
 	return (str);
 }
 
-static int	wordleng(char const *s, char c, int i)
+static int	wordleng(char const *s, char c, int j)
 {
-	int	j;
+	int	i;
 
-	j = 0;
-	while (s[i] != c && s[i] != '\0')
+	i = 0;
+	while (s[j] != c && s[j] != '\0')
 	{
 		i++;
 		j++;
 	}
-	return (j);
+	return (i);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		strings;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	**str;
 
 	strings = stringcounter(s, c);
 	str = malloc((strings + 1) * sizeof(char *));
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	j = 0;
-
 	while (i < strings)
 	{
 		while (s[j] == c)
@@ -78,7 +79,7 @@ char	**ft_split(char const *s, char c)
 
 // int main(void)
 // {
-//     const char *dstr = "";
+//     const char *dstr = "test,,hallo";
 //     char split = ',';
 //     char **result;
 
