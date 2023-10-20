@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:36:13 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/19 15:49:02 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/20 14:33:36 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ static int	wordleng(char const *s, char c, int i)
 	return (j);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		strings;
 	int	i;
-	int j;
+	int	j;
 	char	**str;
 
 	strings = stringcounter(s, c);
@@ -78,7 +78,7 @@ char **ft_split(char const *s, char c)
 
 // int main(void)
 // {
-//     const char *dstr = "dit,is,mijn,,string";
+//     const char *dstr = "";
 //     char split = ',';
 //     char **result;
 
