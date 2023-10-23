@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:20:30 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/20 13:20:49 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/21 14:59:06 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 
 // int main (void)
 // {
-// 	int n = -1234556;
+// 	int n = -214748364999;
 // 	char *str = ft_itoa(n);
 
 // 	printf("%s", str);

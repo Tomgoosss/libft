@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:27:25 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/18 11:28:19 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/21 13:27:32 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,29 @@
 
 char	*ft_strchr(char *s, int c)
 {
-	int	i;
+	char	ch;
 
-	i = 0;
-	while (c != s[i])
+	ch = (char)c;
+
+	while (*s != '\0')
 	{
-		i++;
+		if (*s == ch)
+			return ((char *)s);
+		s++;
 	}
-	return (&s[i]);
+	if (ch == '\0')
+	{
+		return ((char *)s);
+	}
+	return (NULL);
 }
 
 // int main(void)
 // {
-// 	int c = 'l';
+// 	int c = 'f';
 // 	char *a1 = ft_strchr("hello", c);
-// 	char *a2 = strchr("hello", c);
+// 	// char *a2 = strchr("hello", c);
 
 // 	printf("%c\n", *a1);
-// 	printf("%c", *a2);
+// 	// printf("%c", *a2);
 // }

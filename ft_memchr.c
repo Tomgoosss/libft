@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 15:03:39 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/18 11:27:52 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/21 14:45:51 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	while (i < n)
 	{
-		if (*str == c)
-			return (str);
+		if (*str == cc)
+			return ((void *)str);
 		i++;
 		str++;
 	}
