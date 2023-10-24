@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:27:25 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/21 13:27:32 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:28:56 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strchr(char *s, int c)
 	char	ch;
 
 	ch = (char)c;
-
 	while (*s != '\0')
 	{
 		if (*s == ch)

@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 13:06:21 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/21 12:55:54 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:18:10 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size )
 
 	i = 0;
 	l = ft_strlen(src);
-
 	if (!dest || !src)
 	{
 		return (l);
@@ -35,4 +34,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size )
 	}
 	return (l);
 }
-

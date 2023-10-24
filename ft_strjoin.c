@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:01:47 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/18 11:28:50 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:17:50 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	y;
-	int	s1s2count;
+	int		i;
+	int		y;
+	int		s1s2count;
 	char	*copy;
 
-
 	s1s2count = ft_strlen(s1) + ft_strlen(s2);
-	copy = (char *)malloc((s1s2count + 1)* sizeof(char));
+	copy = (char *)malloc((s1s2count + 1) * sizeof(char));
 	i = 0;
 	if (copy == 0)
 		return (NULL);
@@ -47,5 +46,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // 	const char *s2 = "mijn zin";
 
 // 	printf ("%s\n", ft_strjoin(s1, s2));
-	
 // }

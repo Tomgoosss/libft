@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:22:32 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/19 16:08:28 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 12:56:59 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	lenglittle = ft_strlen(little);
 	if (lenglittle == 0)
 		return ((char *)big);
-	while (*big && i < len)
+	while (*big && len >= lenglittle)
 	{
-		if (*big == *little)
+		if (*big == *little && ft_strncmp(big, little, lenglittle) == 0)
 		{
 			return ((char *)big);
 			little++;
 		}
 		big++;
-		i++;
+		len--;
 	}
 	return (0);
 }

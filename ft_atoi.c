@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:41:07 by knockla           #+#    #+#             */
-/*   Updated: 2023/10/19 16:06:35 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:29:19 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	r;
+	int			i;
+	int			r;
 	long long	result;
 
 	i = 0;
@@ -47,6 +47,3 @@ int	ft_atoi(const char *nptr)
 // 	printf("%d\n", ft_atoi(str));
 // 	printf("%d\n", atoi(str));
 // }
-
-
-

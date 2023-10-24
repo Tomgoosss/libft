@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 13:23:02 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/23 15:35:23 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:19:02 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	nstring[i] = '\0';
 	return (nstring);
 }
-

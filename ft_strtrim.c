@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:36:50 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/19 13:07:34 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 15:04:48 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	i = i + 1;
 	ret = ft_substr(s1, j, i - j);
+	if (ret == 0)
+		return (NULL);
 	ret[i] = '\0';
 	return (ret);
 }

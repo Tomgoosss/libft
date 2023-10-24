@@ -6,7 +6,7 @@
 /*   By: tgoossen <tgoossen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:36:13 by tgoossen          #+#    #+#             */
-/*   Updated: 2023/10/20 18:01:30 by tgoossen         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:11:47 by tgoossen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,20 @@ static int	wordleng(char const *s, char c, int j)
 	return (i);
 }
 
+static void	free_str_array(char **str, int i)
+{
+	while (i >= 0)
+	{
+		free(str[i]);
+		i--;
+	}
+	free(str);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		strings;
 	int		i;
-	int		j;
 	char	**str;
 
 	strings = stringcounter(s, c);
@@ -60,17 +69,17 @@ char	**ft_split(char const *s, char c)
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	j = 0;
 	while (i < strings)
 	{
-		while (s[j] == c)
-		{
-			j++;
-		}
-		str[i] = ft_substr(s, j, wordleng(s, c, j));
+		while (*s == c)
+			s++;
+		str[i] = ft_substr(s, 0, wordleng(s, c, 0));
 		if (str[i] == NULL)
-			free(str[i]);
-		j += wordleng(s, c, j);
+		{
+			free_str_array(str, i);
+			return (NULL);
+		}
+		s += wordleng(s, c, 0);
 		i++;
 	}
 	str[i] = NULL;
